@@ -1,3 +1,4 @@
+// redux/features/uiSlice.ts
 import { createSlice } from "@reduxjs/toolkit";
 
 interface UIState {
@@ -12,13 +13,13 @@ const uiSlice = createSlice({
   name: "ui",
   initialState,
   reducers: {
-    toggleSidebar: (state) => {
+    toggleSidebar(state) {
       state.sidebarOpen = !state.sidebarOpen;
     },
-    closeSidebar: (state) => {
+    closeSidebar(state) {
       state.sidebarOpen = false;
     },
-    openSidebar: (state) => {
+    openSidebar(state) {
       state.sidebarOpen = true;
     },
   },
