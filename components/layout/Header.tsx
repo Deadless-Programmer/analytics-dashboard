@@ -5,8 +5,9 @@
 import { useState } from "react";
 import { Bell, Menu} from "lucide-react";
 import { useDispatch} from "react-redux";
+import { toggleSidebar } from "@/redux/features/uiSlice";
 
-import { openSidebar,  } from "@/redux/features/uiSlice";
+
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function Header() {
       <div className="relative flex h-full items-center px-4 md:px-6">
         {/* Left: Mobile Menu */}
         <button
-          onClick={() => dispatch(openSidebar())}
+          onClick={() => dispatch(toggleSidebar())}
           className="p-2 -ml-2 text-gray-600 hover:bg-gray-100 rounded-lg md:hidden"
           aria-label="Open sidebar"
         >
