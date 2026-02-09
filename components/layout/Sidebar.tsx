@@ -1,49 +1,45 @@
 "use client";
 
-import { useState } from "react";
-import clsx from "clsx";
-
-const menu = [
-  { label: "Dashboard", icon: "📊" },
-  { label: "Analytics", icon: "📈" },
-  { label: "Users", icon: "👥" },
-  { label: "Orders", icon: "🛒" },
-  { label: "Settings", icon: "⚙️" },
-];
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import { closeSidebar } from "@/redux/features/uiSlice";
 
 export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
+  const dispatch = useDispatch();
+  const sidebarOpen = useSelector(
+    (state: RootState) => state.ui.sidebarOpen
+  );
 
   return (
-    <aside
-      className={clsx(
-        "fixed top-0 left-0 h-screen bg-white border-r transition-all duration-300 z-40",
-        collapsed ? "w-16" : "w-64"
+    <>
+      {/* Mobile overlay */}
+      {sidebarOpen && (
+        <div
+          onClick={() => dispatch(closeSidebar())}
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
+        />
       )}
-    >
-      {/* Logo */}
-      <div className="h-16 flex items-center justify-between px-4 border-b">
-        {!collapsed && <span className="font-bold">Admin</span>}
-        <button
-          onClick={() => setCollapsed(!collapsed)}
-          className="text-gray-600"
-        >
-          ☰
-        </button>
-      </div>
 
-      {/* Menu */}
-      <nav className="mt-4 space-y-1">
-        {menu.map((item) => (
-          <div
-            key={item.label}
-            className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-blue-50 text-gray-700"
-          >
-            <span className="text-lg">{item.icon}</span>
-            {!collapsed && <span>{item.label}</span>}
-          </div>
-        ))}
-      </nav>
-    </aside>
+      <aside
+        className={`
+          fixed top-0 left-0 z-40 h-full bg-slate-900 text-white
+          transition-all duration-300
+          ${sidebarOpen ? "w-64" : "w-0"}
+          md:w-64
+          ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+        `}
+      >
+        <div className="p-4 text-xl font-bold border-b border-slate-700">
+          Admin Panel
+        </div>
+
+        <nav className="p-4 space-y-3">
+          <Link href="/">Dashboard</Link>
+          <Link href="/users">Users</Link>
+          <Link href="/reports">Reports</Link>
+        </nav>
+      </aside>
+    </>
   );
 }

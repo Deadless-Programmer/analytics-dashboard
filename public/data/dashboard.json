@@ -1,0 +1,36 @@
+{
+  "kpi": { "revenue": 54230, "users": 1245, "orders": 342, "conversion": 4.3 },
+  "revenue": [
+    { "month": "Jan", "value": 4000 },
+    { "month": "Feb", "value": 4200 },
+    { "month": "Mar", "value": 4600 },
+    { "month": "Apr", "value": 4800 },
+    { "month": "May", "value": 5200 },
+    { "month": "Jun", "value": 5800 },
+    { "month": "Jul", "value": 6000 },
+    { "month": "Aug", "value": 6200 },
+    { "month": "Sep", "value": 6400 },
+    { "month": "Oct", "value": 6600 },
+    { "month": "Nov", "value": 6800 },
+    { "month": "Dec", "value": 7000 }
+  ],
+  "orders": [
+    { "month": "Jan", "value": 30 },
+    { "month": "Feb", "value": 45 },
+    { "month": "Mar", "value": 50 },
+    { "month": "Apr", "value": 65 },
+    { "month": "May", "value": 70 },
+    { "month": "Jun", "value": 85 },
+    { "month": "Jul", "value": 90 },
+    { "month": "Aug", "value": 100 },
+    { "month": "Sep", "value": 110 },
+    { "month": "Oct", "value": 120 },
+    { "month": "Nov", "value": 130 },
+    { "month": "Dec", "value": 140 }
+  ],
+  "users": [
+    { "type": "Free", "value": 500 },
+    { "type": "Premium", "value": 400 },
+    { "type": "Enterprise", "value": 345 }
+  ]
+}
