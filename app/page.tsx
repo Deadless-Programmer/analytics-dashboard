@@ -9,12 +9,13 @@ import UserPieChart from "@/components/charts/UserPieChart";
 import FilterBar from "@/components/filters/FilterBar";
 import Skeleton from "@/components/ui/Skeleton";
 import { fetchDashboardData } from "@/services/api";
+import TrafficSourcePieChart from "@/components/charts/TrafficSourcePieChart";
 
 export default function Page() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+const revenueData = data?.revenue || [];
   const loadData = async () => {
     setLoading(true);
     setError(null);
@@ -60,7 +61,7 @@ export default function Page() {
           </div>
         ) : (
           <>
-            {/* KPI */}
+            {/* KPI Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <KPICard title="Total Revenue" value={`$${data.kpi.revenue}`} change="+12.4%" />
               <KPICard title="Total Users" value={data.kpi.users} change="+5.2%" />
@@ -68,10 +69,33 @@ export default function Page() {
               <KPICard title="Conversion Rate" value={`${data.kpi.conversion}%`} change="+1.1%" />
             </div>
 
-            {/* Charts */}
-            <RevenueLineChart data={data.revenue} />
-            <OrdersBarChart data={data.orders} />
-            <UserPieChart data={data.users} />
+            {/* Charts Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h3 className="text-lg font-semibold mb-4">Revenue Over Time</h3>
+                <RevenueLineChart data={revenueData} />
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h3 className="text-lg font-semibold mb-4">Orders Per Month</h3>
+                <OrdersBarChart data={data.orders} barColor="#1E40AF" />
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h3 className="text-lg font-semibold mb-4">User Distribution</h3>
+                <UserPieChart
+                  data={data.users}
+                  colors={["#3B82F6", "#1E40AF", "#2563EB"]} 
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+  <div className="bg-white p-4 rounded-lg shadow lg:col-span-3">
+    <h3 className="text-lg font-semibold mb-4">Traffic Sources</h3>
+    <TrafficSourcePieChart data={data?.traffic || []} />
+  </div>
+</div>
           </>
         )}
       </div>

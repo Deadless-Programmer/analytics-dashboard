@@ -32,5 +32,11 @@
     { "type": "Free", "value": 500 },
     { "type": "Premium", "value": 400 },
     { "type": "Enterprise", "value": 345 }
-  ]
+  ],
+  "traffic": [
+  { "source": "Organic", "value": 6200 },
+  { "source": "Paid", "value": 2800 },
+  { "source": "Social", "value": 1900 },
+  { "source": "Referral", "value": 1400 }
+]
 }

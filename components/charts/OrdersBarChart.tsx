@@ -27,7 +27,7 @@ export default function OrdersBarChart({ data }: any) {
         <BarChart data={filteredData}>
           <XAxis dataKey="month" />
           <Tooltip />
-          <Bar dataKey="value" fill="#10b981" />
+          <Bar dataKey="value" fill="#0c00ff" />
         </BarChart>
       </ResponsiveContainer>
     </div>

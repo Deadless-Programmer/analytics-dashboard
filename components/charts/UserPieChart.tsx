@@ -3,7 +3,7 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 export default function UserPieChart({ data }: any) {
-  const COLORS = ["#3b82f6", "#10b981", "#f59e0b"];
+  const COLORS = ["#0c00ff", "#10b981", "#f59e0b"];
 
   return (
     <div className="bg-white p-6 rounded-xl shadow">
