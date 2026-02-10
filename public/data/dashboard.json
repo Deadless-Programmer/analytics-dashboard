@@ -1,6 +1,12 @@
 {
-  "kpi": { "revenue": 54230, "users": 1245, "orders": 342, "conversion": 4.3 },
-  "revenue": [
+  "kpi": {
+    "revenue": 54230,
+    "users": 1245,
+    "orders": 342,
+    "conversion": 4.3
+  },
+
+  "revenue_monthly": [
     { "month": "Jan", "value": 4000 },
     { "month": "Feb", "value": 4200 },
     { "month": "Mar", "value": 4600 },
@@ -14,7 +20,8 @@
     { "month": "Nov", "value": 6800 },
     { "month": "Dec", "value": 7000 }
   ],
-  "orders": [
+
+  "orders_monthly": [
     { "month": "Jan", "value": 30 },
     { "month": "Feb", "value": 45 },
     { "month": "Mar", "value": 50 },
@@ -28,15 +35,83 @@
     { "month": "Nov", "value": 130 },
     { "month": "Dec", "value": 140 }
   ],
+
+  "revenue_daily": [
+    { "date": "2025-12-01", "value": 210 },
+    { "date": "2025-12-02", "value": 195 },
+    { "date": "2025-12-03", "value": 240 },
+    { "date": "2025-12-04", "value": 220 },
+    { "date": "2025-12-05", "value": 260 },
+    { "date": "2025-12-06", "value": 280 },
+    { "date": "2025-12-07", "value": 310 },
+    { "date": "2025-12-08", "value": 290 },
+    { "date": "2025-12-09", "value": 320 },
+    { "date": "2025-12-10", "value": 340 },
+    { "date": "2025-12-11", "value": 355 },
+    { "date": "2025-12-12", "value": 370 },
+    { "date": "2025-12-13", "value": 385 },
+    { "date": "2025-12-14", "value": 400 },
+    { "date": "2025-12-15", "value": 415 },
+    { "date": "2025-12-16", "value": 430 },
+    { "date": "2025-12-17", "value": 450 },
+    { "date": "2025-12-18", "value": 470 },
+    { "date": "2025-12-19", "value": 490 },
+    { "date": "2025-12-20", "value": 510 },
+    { "date": "2025-12-21", "value": 530 },
+    { "date": "2025-12-22", "value": 550 },
+    { "date": "2025-12-23", "value": 570 },
+    { "date": "2025-12-24", "value": 600 },
+    { "date": "2025-12-25", "value": 620 },
+    { "date": "2025-12-26", "value": 650 },
+    { "date": "2025-12-27", "value": 680 },
+    { "date": "2025-12-28", "value": 710 },
+    { "date": "2025-12-29", "value": 740 },
+    { "date": "2025-12-30", "value": 780 }
+  ],
+
+  "orders_daily": [
+    { "date": "2025-12-01", "value": 4 },
+    { "date": "2025-12-02", "value": 5 },
+    { "date": "2025-12-03", "value": 6 },
+    { "date": "2025-12-04", "value": 7 },
+    { "date": "2025-12-05", "value": 8 },
+    { "date": "2025-12-06", "value": 9 },
+    { "date": "2025-12-07", "value": 10 },
+    { "date": "2025-12-08", "value": 11 },
+    { "date": "2025-12-09", "value": 12 },
+    { "date": "2025-12-10", "value": 13 },
+    { "date": "2025-12-11", "value": 14 },
+    { "date": "2025-12-12", "value": 15 },
+    { "date": "2025-12-13", "value": 16 },
+    { "date": "2025-12-14", "value": 17 },
+    { "date": "2025-12-15", "value": 18 },
+    { "date": "2025-12-16", "value": 19 },
+    { "date": "2025-12-17", "value": 20 },
+    { "date": "2025-12-18", "value": 21 },
+    { "date": "2025-12-19", "value": 22 },
+    { "date": "2025-12-20", "value": 23 },
+    { "date": "2025-12-21", "value": 24 },
+    { "date": "2025-12-22", "value": 25 },
+    { "date": "2025-12-23", "value": 26 },
+    { "date": "2025-12-24", "value": 27 },
+    { "date": "2025-12-25", "value": 28 },
+    { "date": "2025-12-26", "value": 30 },
+    { "date": "2025-12-27", "value": 32 },
+    { "date": "2025-12-28", "value": 34 },
+    { "date": "2025-12-29", "value": 36 },
+    { "date": "2025-12-30", "value": 38 }
+  ],
+
   "users": [
     { "type": "Free", "value": 500 },
     { "type": "Premium", "value": 400 },
     { "type": "Enterprise", "value": 345 }
   ],
+
   "traffic": [
-  { "source": "Organic", "value": 6200 },
-  { "source": "Paid", "value": 2800 },
-  { "source": "Social", "value": 1900 },
-  { "source": "Referral", "value": 1400 }
-]
+    { "source": "Organic", "value": 6200 },
+    { "source": "Paid", "value": 2800 },
+    { "source": "Social", "value": 1900 },
+    { "source": "Referral", "value": 1400 }
+  ]
 }

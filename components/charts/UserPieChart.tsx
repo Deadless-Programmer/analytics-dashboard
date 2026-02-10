@@ -7,7 +7,7 @@ export default function UserPieChart({ data }: any) {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow">
-      <h3 className="mb-4 font-semibold">User Distribution</h3>
+  
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
           <Pie
@@ -18,7 +18,7 @@ export default function UserPieChart({ data }: any) {
             cy="50%"
             outerRadius={80}
             fill="#8884d8"
-            label
+        label={false}
           >
             {data.map((entry: any, index: number) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
