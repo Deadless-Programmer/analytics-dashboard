@@ -30,39 +30,17 @@ A responsive admin dashboard built with Next.js, displaying key business metrics
 - **Other**: clsx, react-redux
 
 ## Project Structure
-## Project Structure
 
-
-.
-├── app/
-│   └── page.tsx                    # Main dashboard page
-├── components/
-│   ├── charts/                     # All Recharts-based chart components
-│   │   ├── RevenueLineChart.tsx
-│   │   ├── OrdersBarChart.tsx
-│   │   ├── UserPieChart.tsx
-│   │   └── TrafficSourcePieChart.tsx
-│   ├── filters/
-│   │   └── FilterBar.tsx           # Date & user type filters
-│   ├── kpi/
-│   │   └── KPICard.tsx
-│   ├── layout/
-│   │   └── DashboardLayout.tsx
-│   └── ui/
-│       └── Skeleton.tsx            # Loading placeholders
-├── public/
-│   └── data/
-│       └── dashboard.json          # Static dashboard data (monthly + daily)
-├── redux/
-│   ├── store.ts                    # Redux store configuration
-│   └── features/
-│       └── dashboardSlice.ts       # Filter state (date range, user type)
-├── services/
-│   └── api.ts                      # fetchDashboardData function
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
-
+- `app/`                → Main pages (dashboard)
+- `components/`         → All UI & chart components
+  - `charts/`           → Revenue, Orders, User, Traffic charts
+  - `filters/`          → Filter controls
+  - `kpi/`              → KPI cards
+  - `layout/`           → Layout wrapper
+  - `ui/`               → Reusable UI (Skeleton etc.)
+- `public/data/`        → Static JSON data
+- `redux/`              → Redux store & slices
+- `services/`           → Data fetching helpers
 
 
 ## Setup Instructions (Local)
