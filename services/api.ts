@@ -1,8 +1,12 @@
 
+export async function fetchDashboardData() {
+  const res = await fetch("/data/dashboard.json", {
+    next: { revalidate: 3600 }, 
+  });
 
-export const fetchDashboardData = async () => {
-  await new Promise((res) => setTimeout(res, 800)); 
-  const res = await fetch("/data/dashboard.json");
-  if (!res.ok) throw new Error("Failed to fetch dashboard data");
+  if (!res.ok) {
+    throw new Error("Failed to load dashboard data");
+  }
+
   return res.json();
-};
+}

@@ -38,7 +38,7 @@ export default function Page() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetchDashboardData(true);
+      const res = await fetchDashboardData();
       setData(res);
     } catch (err: any) {
       setError(err.message);
