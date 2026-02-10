@@ -4,7 +4,7 @@ A responsive admin dashboard built with Next.js, displaying key business metrics
 
 ## Demo
 
-🔗 **Live Demo**: https://analytics-dashboard-app-three.vercel.app 
+🔗 **Live Demo**: https://analytics-dashboard-page.vercel.app
 
 
 ## Features
