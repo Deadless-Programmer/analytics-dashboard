@@ -38,7 +38,7 @@ export default function Header() {
         {/* Right: Notification + User */}
         <div className="ml-auto flex items-center gap-5">
           <button
-            className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+            className="relative -mr-4 md:-mr-4 p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Notifications"
           >
             <Bell size={20} />
